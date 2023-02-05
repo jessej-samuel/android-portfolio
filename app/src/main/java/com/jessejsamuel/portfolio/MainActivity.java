@@ -1,10 +1,10 @@
 package com.jessejsamuel.portfolio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,27 @@ public class MainActivity extends AppCompatActivity {
         Button citiesButton = findViewById(R.id.cities);
 
         degreesButton.setOnClickListener(v -> {
-            Intent i = new Intent(this,DegreesActivity.class);
+            Intent i = new Intent(this, DegreesActivity.class);
+            startActivity(i);
+        });
+
+        coursesButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, CoursesActivity.class);
+            startActivity(i);
+        });
+
+        projectsButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, ProjectsActivity.class);
+            startActivity(i);
+        });
+
+        personalButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, PersonalActivity.class);
+            startActivity(i);
+        });
+
+        citiesButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, CitiesActivity.class);
             startActivity(i);
         });
     }
